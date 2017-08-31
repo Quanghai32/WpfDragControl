@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfDragControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDragControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid x:Name="MainGrid" RenderTransformOrigin="0.499,0.425" Background="Transparent" MouseMove="MainGrid_MouseMove" >
+        <Border x:Name="ctlBorder" BorderThickness="2" BorderBrush="black" HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="178" Background="#f0f0f0" AllowDrop="True" />
+        <Rectangle x:Name="ctlRect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Width="178" Height="51" Margin="0,140,0,0" Stroke="Black" VerticalAlignment="Top" AllowDrop="True" />
+
+        <TextBox x:Name="ctlTextbox" Width="200" Height="30" Text="move Textbox" Background="Yellow" BorderThickness="2" MouseMove="ctlTextbox_MouseMove" Margin="22,77,205,115" TextAlignment="Center" FontWeight="Bold" />
+
+        <Label Content="Textbox movable drag-control" HorizontalAlignment="Left" Height="23" Margin="227,76,0,0" VerticalAlignment="Top" Width="236"/>
+        <Label Content="Rectangle (Target)" HorizontalAlignment="Left" Height="34" Margin="208,135,-17,0" VerticalAlignment="Top" Width="236"/>
+        <Label Content="Border (Target 1)" HorizontalAlignment="Left" Height="23" Margin="208,10,0,0" VerticalAlignment="Top" Width="236"/>
+        <TextBlock x:Name="ctlStatus" HorizontalAlignment="Stretch" Height="30" TextWrapping="Wrap" Text="status" VerticalAlignment="Bottom" />
+
+    </Grid>
+</Window>
